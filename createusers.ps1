@@ -1,3 +1,4 @@
+<# Create and add users to groups #>
 New-ADUser -Name "Private Donut" -GivenName Private -Surname Donut -SamAccountName donut -UserPrincipalName donut -AccountPassword (Read-Host -AsSecureString "redteam1sb3st")  -PassThru | Enable-ADAccount
 Add-ADGroupMember -Identity "Domain Admins" -Member donut
 New-ADUser -Name "Dexter Griff" -GivenName Dexter -Surname Griff -SamAccountName dgriff -UserPrincipalName dgriff -AccountPassword (Read-Host -AsSecureString "redteam1sb3st")  -PassThru | Enable-ADAccount
